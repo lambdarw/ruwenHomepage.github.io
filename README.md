@@ -6,7 +6,7 @@ This is an academic personal website based on [bootstrap](https://github.com/Sta
 
 The template is designed to integrate Markdown files as content input.  There's no need to compile the webpage before deployment.  Upon loading, the Markdown files are automatically parsed and embedded into the page.
 
-Demo: [https://senli1073.github.io/](https://lambdarw.github.io/ruwenHomepage.github.io/)
+Demo: [https://lambdarw.github.io/ruwenHomepage.github.io/]
 
 
 ## Getting Start
