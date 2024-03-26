@@ -1,14 +1,8 @@
 
+- First-prize Academic Scholarship, 2022-2023.
 
-  
+- Excellent Graduation Project of Shangdong Province, 2021.
 
+- First-prize National Scholarship, 2021.
 
-- First-prize Academic Scholarship, 2023.
-
-- Freshman Academic Scholarship, 2022.
-
-- Excellent Graduation Project of Jiangsu Province, 2022.
-
-- First-prize Enterprise Scholarship, 2021.
-
-- First-prize Academic Scholarship, 2019.
+- First-prize Academic Scholarship, 2019-2021.
