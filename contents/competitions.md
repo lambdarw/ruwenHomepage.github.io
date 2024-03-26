@@ -2,6 +2,5 @@
 - Qualification of Computer and Software Professional in Intermediate network Engineer, 2022
 - PAT Level B Certificate (top 16%), 2021
 - Second prize of the Mathematical Contest In Modeling/Interdisciplinary Contest in Modeling, 2020
-- Third prize of the Shandong Division of the National Mathematical Contest in Modeling for College Students, 2020
 - Second prize of the 18th Shandong University Students Software Design Competition, 2020
-- Second prize of the 11th Blue Bridge Cup National Information Technology Talent Competition, 2020
+- Second prize of the 11th Blue-Bridge-Cup National Information Technology Competition, 2020
