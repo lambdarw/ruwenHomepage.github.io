@@ -4,7 +4,7 @@ Ruwen Zhang (张入文) is currently pursuing a Doctor's degree in cyberspace se
 ruwen_zhang[at]seu.edu.cn
 
 #### Education
-2024.03 - present, Studying for Doctoral, Cyberspace security, School of Cyberspace security, Southeast University.
+2024.03 - present, Studying for Doctor, Cyberspace security, School of Cyberspace security, Southeast University.
 
 2022.09 - 2024.01, Studying for Master, Cyberspace security, School of Cyberspace security, Southeast University.
 
