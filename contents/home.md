@@ -1,13 +1,15 @@
 
-He is currently pursuing a Master's Degree in computer science, at School of Computer Science and Technology, China University of Mining and Technology.
+She is currently pursuing a Doctor's degree in cyberspace security, at School of Cyberspace security, Southeast University.
 
 #### Email
-sli[at]cumt.edu.cn
+ruwen_zhang[at]seu.edu.cn
 
 #### Education
-2022.08 - present, Computer Science and Technology, School of Computer Science and Technology, China University of Mining and Technology.
+2024.03 - present, Doctoral candidate, Cyberspace security, School of Cyberspace security, Southeast University.
 
-2018.08 - 2022.06, Data Science and Big Data Technology, School of Computer Science and Technology, China University of Mining and Technology.
+2022.09 - 2024.01, Master candidate, Cyberspace security, School of Cyberspace security, Southeast University.
+
+2018.09 - 2022.06, Bachelor, Computer Science and Technology, School of Computer, Qufu Normal University.
 
 #### Research Interests
-Deep Learning, Artificial Intelligence Seismology, Mine Microseismic.
+social Network, LLM, Knowledge graph.
