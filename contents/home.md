@@ -1,5 +1,4 @@
-
-She is currently pursuing a Doctor's degree in cyberspace security, at School of Cyberspace security, Southeast University.
+Ruwen Zhang (张入文) is currently pursuing a Doctor's degree in cyberspace security, at School of Cyberspace security, Southeast University (东南大学). 
 
 #### Email
 ruwen_zhang[at]seu.edu.cn
