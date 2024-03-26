@@ -1,14 +1,12 @@
 # My Github Pages for academic personal website.
 
-fork by ![License](https://img.shields.io/github/license/senli1073/senli1073.github.io)
-
 ## Introduction
 
 This is an academic personal website based on [bootstrap](https://github.com/StartBootstrap/startbootstrap-new-age).
 
 The template is designed to integrate Markdown files as content input.  There's no need to compile the webpage before deployment.  Upon loading, the Markdown files are automatically parsed and embedded into the page.
 
-Demo: https://senli1073.github.io/
+Demo: [https://senli1073.github.io/](https://lambdarw.github.io/ruwenHomepage.github.io/)
 
 
 ## Getting Start
