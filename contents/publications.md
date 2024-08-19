@@ -1,3 +1,4 @@
+- **Ruwen Zhang**, Jinglu Chen, Mingjie Dai, Xinyi Jiang, Yuxin Hu, Bo Liu*, and Jiuxin Cao. METER: Multimodal Hallucination Detection with Mixture of Experts via Tools Ensembling and Reasoning. NLPCC 2024.[[Code]](https://github.com/lambdarw/METER)(under review, **CCF C**). 
 
 - **Ruwen Zhang**, Bo Liu*, Jiuxin Cao, Hantao Zhao, Xuheng Sun, Yan Liu, and Xiangguo Sun. Modeling Group-Level Public Sentiment in Social Networks through Topic and Role Enhancement. Knowledge-Based Systems.[[Code]](https://github.com/lambdarw/TwiCOVID19)(under review, **SCI Q1**).
 
