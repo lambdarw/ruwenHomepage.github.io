@@ -8,5 +8,7 @@
   
 - Rui Zhu, Shengxiang Zhang, Bo Liu*, Qiuyu Tian, Wuxiao Qing, **Ruwen Zhang**, Jiuxin Cao, and Linfeng Qian. _Web search result diversification by combining global and local document features_. Applied Soft Computing, 2025.[[Paper]](https://www.sciencedirect.com/science/article/pii/S1568494624013176)(**SCI Q2, IF=6.6**)
   
-- Rui Zhu, Bo Liu*, **Ruwen Zhang**, Shengxiang Zhang, Jiuxin Cao. _OEQA: Knowledge-and Intention-Driven Intelligent Ocean Engineering Question-Answering Framework_. Applied Sciences, 2023, 13(23): 12915.[[Paper]](https://www.mdpi.com/2076-3417/13/23/12915)(**SCI Q3, IF=2.5**)
+<!--
+- Rui Zhu, Bo Liu*, **Ruwen Zhang**, Shengxiang Zhang, Jiuxin Cao. _OEQA: Knowledge-and Intention-Driven Intelligent Ocean Engineering Question-Answering Framework_. Applied Sciences, 2023, 13(23): 12915.[[Paper]](https://www.mdpi.com/2076-3417/13/23/12915)(**SCI Q3, IF=2.5**) 
+-->
 
