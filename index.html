@@ -88,7 +88,7 @@
                 <h2 id="home-subtitle"> </h2>
                 <!-- <span class="bi bi-list"></span> -->
             </header>
-            <div class="main-body" id="home-md"></div>
+            <div class="main-body" id="home-md" lang="en"></div>
         </div>
     </section>
     <!-- Home -->
@@ -110,7 +110,7 @@
             <header>
                 <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>&nbsp;<span data-i18n="awards">AWARDS</span></h2>
             </header>
-            <div class="main-body" id="awards-md"></div>
+            <div class="main-body" id="awards-md" lang="en"></div>
         </div>
     </section>
     <!-- Awards -->
@@ -168,6 +168,9 @@
         // 初始化语言
         let currentLang = localStorage.getItem('language') || 'en';
         document.getElementById('currentLanguage').textContent = currentLang === 'en' ? 'EN' : '中';
+        document.getElementById('home-md').setAttribute('lang', lang);
+        document.getElementById('awards-md').setAttribute('lang', lang);
+
         
         // 翻译函数
         function translatePage(lang) {
@@ -190,27 +193,28 @@
         
         // 根据语言加载内容
         function loadContentForLanguage(lang) {
-            // 这里可以根据语言加载不同的Markdown文件或其他内容
-            // 例如：
-            // const homeMdPath = lang === 'en' ? 'static/content/home-en.md' : 'static/content/home-zh.md';
-            // fetch(homeMdPath).then(...);
-            
-            // 这只是示例，您需要根据实际需求实现
-            console.log(`Loading content for ${lang} language`);
-        }
+            const homeMdPath = `static/content/home-${lang}.md`;
+            const awardsMdPath = `static/content/awards-${lang}.md`;
         
-        // 语言切换事件
-        document.querySelectorAll('.language-selector').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const lang = this.getAttribute('data-lang');
-                translatePage(lang);
-            });
-        });
+            // 加载 home 区域内容
+            fetch(homeMdPath)
+                .then(response => response.text())
+                .then(md => {
+                    document.getElementById('home-md').innerHTML = marked.parse(md);
+                });
+        
+            // 加载 awards 区域内容
+            fetch(awardsMdPath)
+                .then(response => response.text())
+                .then(md => {
+                    document.getElementById('awards-md').innerHTML = marked.parse(md);
+                });
+        }
+
         
         // 页面加载时应用当前语言
         document.addEventListener('DOMContentLoaded', function() {
-            translatePage(currentLang);
+            translatePage(currentLang);  // 加载语言资源 & markdown
         });
     </script>
 </body>
