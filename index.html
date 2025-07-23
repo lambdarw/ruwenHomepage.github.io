@@ -39,15 +39,24 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
+                        <a class="nav-link me-lg-3" href="#page-top" data-i18n="home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
+                        <a class="nav-link me-lg-3" href="#publications" data-i18n="publications">PUBLICATIONS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
+                        <a class="nav-link me-lg-3" href="#awards" data-i18n="awards">AWARDS</a>
                     </li>
-
+                    <!-- 添加语言切换按钮 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="currentLanguage">EN</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item language-selector" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item language-selector" href="#" data-lang="zh">中文</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -80,8 +89,6 @@
                 <!-- <span class="bi bi-list"></span> -->
             </header>
             <div class="main-body" id="home-md"></div>
-
-
         </div>
     </section>
     <!-- Home -->
@@ -90,10 +97,9 @@
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
         <div class="container px-5">
             <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
+                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;<span data-i18n="publications">PUBLICATIONS</span></h2>
             </header>
             <div class="main-body" id="publications-md"></div>
-
         </div>
     </section>
     <!-- Publications  -->
@@ -102,26 +108,13 @@
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
         <div class="container px-5">
             <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>&nbsp;AWARDS </h2>
+                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>&nbsp;<span data-i18n="awards">AWARDS</span></h2>
             </header>
             <div class="main-body" id="awards-md"></div>
-
         </div>
     </section>
     <!-- Awards -->
 
-    <!-- Competitions -->
-<!--     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="competitions">
-        <div class="container px-5">
-            <header>
-                <h2 id="competitions-subtitle"><i class="bi bi-bookmark-star-fill"></i>&nbsp;COMPETITIONS </h2>
-            </header>
-            <div class="main-body" id="competitions-md"></div>
-        </div>
-    </section> -->
-    <!-- Competitions -->
-
-    
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
@@ -129,7 +122,7 @@
                 <div id="copyright-text" class="mb-2"></div>
                 <a id="github-link" href="https://github.com/lambdarw">Github</a>
                 <span class="mx-1">&middot;</span>
-                <a id="license-link" href="">License</a>
+                <a id="license-link" href="" data-i18n="license">License</a>
             </div>
         </div>
     </footer>
@@ -147,8 +140,78 @@
     <!-- Core JS-->
     <script type="text/javascript" src="static/js/scripts.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
-
-
+    
+    <!-- 添加语言切换功能 -->
+    <script>
+        // 语言资源
+        const resources = {
+            en: {
+                translation: {
+                    "home": "HOME",
+                    "publications": "PUBLICATIONS",
+                    "awards": "AWARDS",
+                    "license": "License"
+                    // 添加更多需要翻译的文本
+                }
+            },
+            zh: {
+                translation: {
+                    "home": "首页",
+                    "publications": "发表论文",
+                    "awards": "获奖情况",
+                    "license": "许可协议"
+                    // 添加更多需要翻译的文本
+                }
+            }
+        };
+        
+        // 初始化语言
+        let currentLang = localStorage.getItem('language') || 'en';
+        document.getElementById('currentLanguage').textContent = currentLang === 'en' ? 'EN' : '中';
+        
+        // 翻译函数
+        function translatePage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.getElementById('currentLanguage').textContent = lang === 'en' ? 'EN' : '中';
+            
+            // 更新所有带有data-i18n属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (resources[lang] && resources[lang].translation[key]) {
+                    element.textContent = resources[lang].translation[key];
+                }
+            });
+            
+            // 这里可以添加更多需要根据语言切换的内容
+            // 例如：加载不同语言的Markdown内容
+            loadContentForLanguage(lang);
+        }
+        
+        // 根据语言加载内容
+        function loadContentForLanguage(lang) {
+            // 这里可以根据语言加载不同的Markdown文件或其他内容
+            // 例如：
+            // const homeMdPath = lang === 'en' ? 'static/content/home-en.md' : 'static/content/home-zh.md';
+            // fetch(homeMdPath).then(...);
+            
+            // 这只是示例，您需要根据实际需求实现
+            console.log(`Loading content for ${lang} language`);
+        }
+        
+        // 语言切换事件
+        document.querySelectorAll('.language-selector').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                translatePage(lang);
+            });
+        });
+        
+        // 页面加载时应用当前语言
+        document.addEventListener('DOMContentLoaded', function() {
+            translatePage(currentLang);
+        });
+    </script>
 </body>
-
 </html>
