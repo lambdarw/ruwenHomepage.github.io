@@ -190,13 +190,22 @@
         
         // 根据语言加载内容
         function loadContentForLanguage(lang) {
-            // 这里可以根据语言加载不同的Markdown文件或其他内容
-            // 例如：
-            // const homeMdPath = lang === 'en' ? 'static/content/home-en.md' : 'static/content/home-zh.md';
-            // fetch(homeMdPath).then(...);
-            
-            // 这只是示例，您需要根据实际需求实现
-            console.log(`Loading content for ${lang} language`);
+            // 定义各部分的Markdown文件路径
+            const contentPaths = {
+                home: `contents/home-${lang}.md`,
+                awards: `contents/awards-${lang}.md`
+            };
+        
+            // 加载并渲染每个部分的内容
+            Object.keys(contentPaths).forEach(section => {
+                const mdPath = contentPaths[section];
+                const targetElement = document.getElementById(`${section}-md`);
+                
+                if (!targetElement) {
+                    console.warn(`Target element not found for section: ${section}`);
+                    return;
+                }
+            });
         }
         
         // 语言切换事件
