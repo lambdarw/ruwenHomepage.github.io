@@ -197,20 +197,33 @@
             const homeMdPath = `static/content/home-${lang}.md`;
             const awardsMdPath = `static/content/awards-${lang}.md`;
         
-            // 加载 home 区域内容
+            // 加载 home.md
             fetch(homeMdPath)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) throw new Error('404');
+                    return response.text();
+                })
                 .then(md => {
                     document.getElementById('home-md').innerHTML = marked.parse(md);
+                })
+                .catch(() => {
+                    document.getElementById('home-md').innerHTML = `<p>${lang === 'en' ? 'Content not found.' : '找不到内容。'}</p>`;
                 });
         
-            // 加载 awards 区域内容
+            // 加载 awards.md
             fetch(awardsMdPath)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) throw new Error('404');
+                    return response.text();
+                })
                 .then(md => {
                     document.getElementById('awards-md').innerHTML = marked.parse(md);
+                })
+                .catch(() => {
+                    document.getElementById('awards-md').innerHTML = `<p>${lang === 'en' ? 'Content not found.' : '找不到内容。'}</p>`;
                 });
         }
+
 
         
         // 页面加载时应用当前语言
