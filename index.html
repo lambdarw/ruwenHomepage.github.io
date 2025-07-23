@@ -192,8 +192,8 @@
         function loadContentForLanguage(lang) {
             // 定义各部分的Markdown文件路径
             const contentPaths = {
-                home: `contents/home-${lang}.md`,
-                awards: `contents/awards-${lang}.md`
+                home: `./contents/home-${lang}.md`,
+                awards: `./contents/awards-${lang}.md`
             };
         
             // 加载并渲染每个部分的内容
@@ -205,6 +205,36 @@
                     console.warn(`Target element not found for section: ${section}`);
                     return;
                 }
+        
+                // 显示加载状态
+                targetElement.innerHTML = '<div class="text-center py-3"><div class="spinner-border text-primary" role="status"></div></div>';
+        
+                fetch(mdPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Failed to load ${mdPath}: ${response.status}`);
+                        }
+                        return response.text();
+                    })
+                    .then(markdownText => {
+                        // 使用marked.js渲染Markdown
+                        targetElement.innerHTML = marked.parse(markdownText);
+                        
+                        // 如果有MathJax公式，需要重新渲染
+                        if (typeof MathJax !== 'undefined') {
+                            MathJax.typesetPromise();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                        targetElement.innerHTML = `
+                            <div class="alert alert-warning">
+                                ${lang === 'en' 
+                                    ? 'Content could not be loaded.' 
+                                    : '内容加载失败。'}
+                            </div>
+                        `;
+                    });
             });
         }
         
