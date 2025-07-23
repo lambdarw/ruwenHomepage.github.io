@@ -168,16 +168,13 @@
         // 初始化语言
         let currentLang = localStorage.getItem('language') || 'en';
         document.getElementById('currentLanguage').textContent = currentLang === 'en' ? 'EN' : '中';
-        document.getElementById('home-md').setAttribute('lang', lang);
-        document.getElementById('awards-md').setAttribute('lang', lang);
-
         
         // 翻译函数
         function translatePage(lang) {
             currentLang = lang;
             localStorage.setItem('language', lang);
             document.getElementById('currentLanguage').textContent = lang === 'en' ? 'EN' : '中';
-            
+        
             // 更新所有带有data-i18n属性的元素
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -185,11 +182,15 @@
                     element.textContent = resources[lang].translation[key];
                 }
             });
-            
-            // 这里可以添加更多需要根据语言切换的内容
-            // 例如：加载不同语言的Markdown内容
+        
+            // 更新 Markdown 容器的 lang 属性（可选）
+            document.getElementById('home-md').setAttribute('lang', lang);
+            document.getElementById('awards-md').setAttribute('lang', lang);
+        
+            // 加载对应语言的 Markdown
             loadContentForLanguage(lang);
         }
+
         
         // 根据语言加载内容
         function loadContentForLanguage(lang) {
