@@ -1,9 +1,14 @@
-- First prize of "NLPCC 2024 Shared Task 10: Mult imodal Hallucination Detection for Multimodal Large Language Models (Closed-Source Model Group)", 2024
+- **Competitions**
+  - 1st Prize, 13th NLPCC International Conference Shared Task (Shared Task 10), Nov. 2024
+  - 2nd Prize, China Post-Graduate Mathematical Contest in Modeling, Oct. 2023
+  - 2nd Prize, Interdisciplinary Contest in Modeling, Oct. 2020
+  - 2nd Prize, iCAN Innovation Contest of Shandong Province, Nov. 2021
+  - 2nd Prize, 11th Lanqiao Cup National Python Programming Competition, Nov. 2020
 
-- Second prize of "Optics Valley Of China·Huawei Cup" The 19th China Post-Graduate Mathematical Contest in Modeling, 2023
-  
-- Qualification of "Computer and Software Professional" in Intermediate network Engineer, 2022
+- **Awards**
+  - National scholarship, Qufu Normal University (top 1%), Oct. 2020  
+  - Outstanding student of Shandong Province, Qufu Normal University (top 1%), Oct. 2021 
+  - Model Student with All-round Excellence, Southeast University (top 1%), Oct. 2025 
+  - First-class Scholarship (Awarded annually for 7 consecutive years), 2018-2025 
 
-- Excellent Student of Shangdong Province, 2021.
-
-- National Scholarship, 2021.
+ 
